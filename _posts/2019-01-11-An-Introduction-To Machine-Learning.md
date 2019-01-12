@@ -1,5 +1,7 @@
 ---
-published: false
+layout: post
+title: You're up and running!
+published: true
 ---
 ## Let's do nearest neighbor
 
