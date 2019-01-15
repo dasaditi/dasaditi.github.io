@@ -4,12 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I am currently doing my Master's in Data Science from UC Berkeley(MIDS) and researching on various machine learning algorithm.
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+This blog serves as my personal scratchpad: I mainly post to reinforce the insights I have gained solving a variety of problems but I also hope the content can prove useful to readers working on similar problems.
