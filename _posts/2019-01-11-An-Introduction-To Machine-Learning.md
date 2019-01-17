@@ -1,6 +1,6 @@
 ---
 layout: post
-title: nearest neighbor
+title: Who is your nearest neighbor?
 published: true
 ---
 ## Let's do nearest neighbor
