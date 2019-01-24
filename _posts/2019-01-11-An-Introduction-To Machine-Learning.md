@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Who is your nearest neighbor?
+date: 2013-07-30 17:57:28-0700
 published: true
 ---
 
