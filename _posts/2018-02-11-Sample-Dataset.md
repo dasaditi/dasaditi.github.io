@@ -1,37 +1,38 @@
 ---
 layout: post
 title: Understanding Sample Datasets packaged with scikit-learn!
+excerpt: Peek at breast cancer wisconsin (diagnostic) dataset
 published: true
 ---
-### Introduction
+## Introduction
 
-#### scikit-learn is packaged with some sample toy datasets to address both classification and regression problems. The details of the datasets can be found [here](https://scikit-learn.org/stable/datasets/index.html#toy-datasets).There are around 7 datasets at the time of writing. They are very handy if you want to explore various models without worrying too much where to get the data from. We will go over the breast cancer dataset here , the rest of the datasets follow the similar pattern.
+scikit-learn is packaged with some sample toy datasets to address both classification and regression problems. The details of the datasets can be found [here](https://scikit-learn.org/stable/datasets/index.html#toy-datasets).There are around 7 datasets at the time of writing. They are very handy if you want to explore various models without worrying too much where to get the data from. We will go over the breast cancer dataset here , the rest of the datasets follow the similar pattern.
 
-#### The breast cancer dataset is a classic and very easy binary classification dataset. The motivation behind studying this dataset is the develop an algorithm, which would be able to predict whether a patient has a malignant or benign tumor, based on the features computed from her breast mass.
+The breast cancer dataset is a classic and very easy binary classification dataset. The motivation behind studying this dataset is the develop an algorithm, which would be able to predict whether a patient has a malignant or benign tumor, based on the features computed from her breast mass.
 
-### Lets load the dataset
-
-
+## Lets load the dataset
 ```python
 from sklearn import datasets
 cancer = datasets.load_breast_cancer()
 type(cancer)
 ```
-    sklearn.utils.Bunch
+```
+ sklearn.utils.Bunch
+```
+load_breast_cancer() returns a dictionary-like object called bunch , with attributes  **_data_** : that holds the observations to learn from and **_target_**: the classification labels.  
 
-#### load_breast_cancer() returns a dictionary-like object called bunch , with attributes  **_data_** : that holds the observations to learn from and **_target_**: the classification labels.
-#### You might be wondering why *data* and *target* are separate? scikit-learn expects the features and classification labels to be passed to the machine learning model as separate objects, hence cancer.data and cancer.target are stored separately. 
+You might be wondering why *data* and *target* are separate? scikit-learn expects the features and classification labels to be passed to the machine learning model as separate objects, hence cancer.data and cancer.target are stored separately.   
 
-#### You may also load the data separately into two objects at the first go instead of the Bunch object by setting *return_X_y=True* .
+You may also load the data separately into two objects at the first go instead of the Bunch object by setting *return_X_y=True* .
 
 
 ```python
 X,y=datasets.load_breast_cancer(return_X_y=True)
 ```
 
-### Learn more about the dataset
+## Learn more about the dataset
 
-#### Before you begin modeling it is always a good idea to understand the origin, history  and characteristics of the datasets. scikit-learn provides you with DESCR attribute for exactly that purpose. As you see below the description talks about the number of observations, feature list, missing attributes if any etc etc...
+Before you begin modeling it is always a good idea to understand the origin, history  and characteristics of the datasets. scikit-learn provides you with DESCR attribute for exactly that purpose. As you see below the description talks about the number of observations, feature list, missing attributes if any etc etc...
 
 
 ```python
@@ -158,8 +159,8 @@ print(cancer.DESCR)
          163-171.
 
 
-### Exploring *data* and *target*
-#### As mentioned above, there are two attributes of the dataset. *data* holds the array of observations while *target* stores the classification labels.
+## Exploring *data* and *target*
+As mentioned above, there are two attributes of the dataset. *data* holds the array of observations while *target* stores the classification labels.
 
 
 ```python
@@ -171,7 +172,7 @@ print(cancer.target.shape)
   (569,)
 
 
-#### As you see the breast cancer dataset contains 569 observations with 30 features.The data attribute is 2 dimensional : each row represents an observation while each column represents a feature. The target contains 569 classification. Let's look at the feature name of the data set. You can think of these as the column headers of the data.There should be one response corresponding to each observation.
+As you see the breast cancer dataset contains 569 observations with 30 features.The data attribute is 2 dimensional : each row represents an observation while each column represents a feature. The target contains 569 classification. Let's look at the feature name of the data set. You can think of these as the column headers of the data.There should be one response corresponding to each observation.
 
 
 ```python
@@ -206,7 +207,7 @@ cancer.target_names
 
 
 
-#### Let's look closely at the *target* attribute. *target* represents the outcome that we are going to predict. 0 represents malignant tumor while 1 represents benign tumor. However, the data provided to us is in 0/1 in the target object.
+Let's look closely at the *target* attribute. *target* represents the outcome that we are going to predict. 0 represents malignant tumor while 1 represents benign tumor. However, the data provided to us is in 0/1 in the target object.
 
 
 
@@ -234,9 +235,9 @@ print(cancer.target)
 
 
 
-#### This is because scikit-learn only expects to see numbers in features and response object , hence *cancer.target* is stored in 0 and 1 instead of 'malignant' and 'benign'. scikit-learn also expects the response should always be numeric regardless of whether it is regression or classification.
+This is because scikit-learn only expects to see numbers in features and response object , hence *cancer.target* is stored in 0 and 1 instead of 'malignant' and 'benign'. scikit-learn also expects the response should always be numeric regardless of whether it is regression or classification.
 
-#### Let's look at the datatype of *data* and *target*. scikit-Learn expects the features and labels to be stored as numpy arrays .
+Let's look at the datatype of *data* and *target*. scikit-Learn expects the features and labels to be stored as numpy arrays .
 
 
 ```python
@@ -251,7 +252,7 @@ type(cancer.target)
 
 
 
-####  As per the scikit-learn convention , the feature data is stored in a variable X (X is capitalized as it represents a matrix) and response data in y( y is lowercase as it represents a vector)
+As per the scikit-learn convention , the feature data is stored in a variable X (X is capitalized as it represents a matrix) and response data in y( y is lowercase as it represents a vector)
 
 
 ```python
@@ -259,4 +260,5 @@ X= cancer.data
 y = cancer.target
 ```
 
-#### Now you are ready to explore the data and model. Happy Modeling!!
+Now you are ready to explore the data and model. 
+#### Happy Modeling!!!
