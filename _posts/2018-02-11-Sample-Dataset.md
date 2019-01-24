@@ -4,6 +4,7 @@ title: Understanding Sample Datasets packaged with scikit-learn!
 excerpt: Peek at breast cancer wisconsin (diagnostic) dataset
 date: '2018-02-11'
 img: first-post.png
+tags: [dataset, scikit-learn]
 published: true
 ---
 ## Introduction
