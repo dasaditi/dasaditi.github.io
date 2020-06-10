@@ -1,8 +1,11 @@
-
-<center> 
-
-# Implementing Linear Regression Algorithm with Numpy
-</center>    
+---
+layout: post
+title: Implementing Linear Regression Algorithm with Numpy
+excerpt: TBD
+img: LR3.jpg
+tags: [LR, scikit-learn]
+published: true
+---
 
 ## Introduction
 
@@ -316,7 +319,7 @@ plt.show()
 ```
 
 
-![png](output_37_0.png)
+![png](images/LR1.png)
 
 
 We can clearly see that the cost decreased drastically with more iterations. The gradient descent function returned the optimal parameter values, consequently, we can now use them to predict new target values.
