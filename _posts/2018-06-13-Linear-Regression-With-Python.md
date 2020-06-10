@@ -6,7 +6,7 @@ img: LR3.jpg
 imgsrc: "Photo by Maxime Lebrun on Unsplash"
 tags: [LR, scikit-learn]
 published: true
----
+--- 
 
 ## Introduction
 
