@@ -2,7 +2,7 @@
 layout: post
 title: Understanding Sample Datasets packaged with scikit-learn!
 excerpt: Peek at breast cancer wisconsin (diagnostic) dataset
-img: fsample-dataset.jpg
+img: sample-dataset.jpg
 tags: [dataset, scikit-learn]
 published: true
 ---
