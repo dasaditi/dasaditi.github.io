@@ -115,6 +115,18 @@ img {
   max-width: none;
 }
 
+figcaption {
+  margin: 10px 0 0 0;
+  font-variant: small-caps;
+  font-family: Arial;
+  font-weight: bold;
+  color: #bb3333;
+  text-align: center;
+}
+
+figure {
+  padding: 5px;
+}
 .date {
   font-style: italic;
   color: $gray;
