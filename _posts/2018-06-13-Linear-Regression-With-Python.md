@@ -214,10 +214,11 @@ As you see above the how easily you can calculate the partial derivative through
 In the final step, we use the gradients to update the parameters. Since we are trying to minimize our losses, we reverse the sign of the gradient for the update.
 There is still another parameter to consider: the ***learning rate***, denoted by the Greek letter eta (that looks like the letter n), which is the multiplicative factor that we need to apply to the gradient for the parameter update. The learning rate is a tuning parameter in an optimization algorithm that determines the step size at each iteration while moving toward a minimum of a loss function.
 
-$$ \large \alpha = \alpha - \eta \frac{\partial MSE}{\partial \alpha} $$
+    $$ \large \alpha = \alpha - \eta \frac{\partial MSE}{\partial \alpha} $$
 
-$$ \large \beta_1 = \beta_1 - \eta \frac{\partial MSE}{\partial \beta_1} $$
-$$ \large \beta_2 = \beta_2 - \eta \frac{\partial MSE}{\partial \beta_2} $$
+    $$ \large \beta_1 = \beta_1 - \eta \frac{\partial MSE}{\partial \beta_1} $$
+
+    $$ \large \beta_2 = \beta_2 - \eta \frac{\partial MSE}{\partial \beta_2} $$
 
 > **Learning rate is a hyper-parameter that controls how much we are adjusting the weights of our model with respect to the loss gradient. The lower the value, the slower we travel along the downward slope.**
 
