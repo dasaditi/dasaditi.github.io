@@ -2,7 +2,7 @@
 layout: post
 title: Implementing Linear Regression Algorithm with Numpy
 excerpt: TBD
-img: LR3.jpg
+img: LR3.png
 tags: [LR, scikit-learn]
 published: true
 ---
