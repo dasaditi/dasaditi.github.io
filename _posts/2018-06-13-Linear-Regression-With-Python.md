@@ -32,7 +32,7 @@ Before we dive into the math let's see if we can visualize the above equation (1
 
 $$ \begin{align}\large \widehat{y} = \alpha\times 1+ \beta_1 \times x_1 + \beta_2 \times x_2 + \cdots + \beta_n \times x_n \end{align} \tag{1.1}$$
 
-
+$$
 \begin{equation}
 \begin{bmatrix}
 \widehat{y}
@@ -50,6 +50,7 @@ $$ \begin{align}\large \widehat{y} = \alpha\times 1+ \beta_1 \times x_1 + \beta_
     \beta_n \\
   \end{bmatrix}_{n+1 \times 1} \tag{1.2}
 \end{equation}
+$$
 
 Now, if we do a dot product of eq(1.2) we will get back eq(1.1).
 
