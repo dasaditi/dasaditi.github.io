@@ -203,7 +203,7 @@ def partial_derivative(X,y,y_hat):
     return pd
 ```
 
-<img src="images/LR2.png" alt="Vector Representation of Partial Derivative"/>
+<img src="../images/LR2.png" alt="Vector Representation of Partial Derivative"/>
 
 
 
