@@ -5,6 +5,7 @@ date: 2018-02-11 17:57:28-0700
 excerpt: scikit-learn is packaged with few sample toy datasets to address both classification and regression problems. The idea of this blog is to understand how to load and explore these datasets.
 
 img: sample-dataset.jpg
+imgsrc: "Photo by Joshua Sortino on Unsplash"
 tags: [dataset, scikit-learn]
 published: true
 ---
