@@ -55,6 +55,7 @@ $$
 Now, if we do a dot product of eq(1.2) we will get back eq(1.1).
 
 In a typical regression problem, we will have multitude of data. If we have m records with n feature each , the matrix-vector representation of the equation will look like this.
+$$
 \begin{equation}
 \begin{bmatrix}
 \widehat{y_1} \\
@@ -80,7 +81,7 @@ In a typical regression problem, we will have multitude of data. If we have m re
     \beta_n \\
   \end{bmatrix}_{ n+1 \times 1} \tag{1.3}
 \end{equation}
-
+$$
 Why did I emphasize on such representation? Because rather than calculating each weight individually, you will have a vector representation of the weights and calculate them in one shot much more efficiently. These weights are called parameters in machine learning lingo. Notice that the weight vector doesn't change its dimension with more data, that means the number of parameters to calculate doesn't change with the number of records.
 
 ## Gradient Descent Algorithm
