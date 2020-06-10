@@ -323,7 +323,7 @@ plt.show()
 ```
 
 
-![png](images/LR1.png)
+![png](../images/LR1.png)
 
 
 We can clearly see that the cost decreased drastically with more iterations. The gradient descent function returned the optimal parameter values, consequently, we can now use them to predict new target values.
