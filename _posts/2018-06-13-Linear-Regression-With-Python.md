@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Implementing Linear Regression Algorithm with Numpy
-excerpt: TBD
+excerpt: "The idea of this post is to understand the math behind Gradient Descent and compute the parameters with the help of numpy only."
 img: LR3.jpg
 imgsrc: "Photo by Maxime Lebrun on Unsplash"
 tags: [LR, scikit-learn]
