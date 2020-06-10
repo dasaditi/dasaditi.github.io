@@ -14,7 +14,10 @@ layout: default
         {{ post.excerpt }}
       </div>
       <div class="img">
-      <img src="{{ site.baseurl }}/images/{{ post.img }}" width="1000" height="350">
+        <figure>
+          <img src="{{ site.baseurl }}/images/{{ post.img }}" width="1000" height="350"/>
+          <figcaption>Caption goes here</figcaption>
+        </figure>
       </div>
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
