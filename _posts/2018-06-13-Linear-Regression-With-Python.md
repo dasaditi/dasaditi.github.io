@@ -226,11 +226,11 @@ $$ \large \beta_2 = \beta_2 - \eta \frac{\partial MSE}{\partial \beta_2} $$
 Let's write down the entire algorithm 
 * Initialize parameters with random values
 > * LOOP till the stopping criteria is met:
-    1. Compute the predicted y
-    2. Compute loss
-    3. Compute partial derivative w.r.t parameters
-    4. Update parameters
-    5. Repeat
+>    1. Compute the predicted y
+>    2. Compute loss
+>    3. Compute partial derivative w.r.t parameters
+>    4. Update parameters
+>    5. Repeat
 
 
 ```python
