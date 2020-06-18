@@ -10,7 +10,7 @@ published: true
 
 ## Introduction
 
-Despite its name, logistic regression (LR) is a classification algorithm where the output $y$ produces discrete outcomes. In a classification problem we want to predict a variable $y$ $\in$ {0,1}, where 0 is called negative class, while 1 is called positive class. Such task is known as binary classification. Other classification problems might require more than a binary output, for example where $y$ $\in$ {0,1,2,3}. Such classification is known as a multiclass classification. In this post we will be focusing on the binary classification problem.
+Despite its name, logistic regression is a classification algorithm where the output $y$ produces discrete outcomes. In a classification problem we want to predict a variable $y$ $\in$ {0,1}, where 0 is called negative class, while 1 is called positive class. Such task is known as binary classification. Other classification problems might require more than a binary output, for example where $y$ $\in$ {0,1,2,3}. Such classification is known as a multiclass classification. In this post we will be focusing on the binary classification problem.
 
 There are many useful resources explaining the concept behind logistic regression, particularly I found Andrew Ng's [machine learning course](https://www.coursera.org/learn/machine-learning/) very useful. In this blog I will only cover the points necessary to understand the math and implement it yourself without the help of any machine learning library.
 
@@ -22,17 +22,21 @@ Instead use maximum likelihood estimation.
 ## Hypothesis Representation
 
 The logistic regression's hypothesis function outputs a number between 0 and 1.	$0\leq h_\theta(x)\leq 1$.
-You can think of it as the estimated probability that $y=1$ based on given input $x$ and model parameter $\theta$. Formally, the hypothesis function can be written as: $$\large h_\theta(x)=P(y=1|x;\theta)$$ 
+You can think of it as the estimated probability that $y=1$ based on given input $x$ and model parameter $\theta$. Formally, the hypothesis function can be written as:   
+$$ \large h_\theta(x)=P(y=1|x;\theta) $$ 
 
 In simple words, the hypothesis function tells you the probability that $y=1$ given $x$, parametrized by $\theta$.  
 
-Since the outcome $y$ is restricted between two values 0 and 1, we can compute the probability that $y=0$ as well.
+Since the outcome $y$ is restricted between two values 0 and 1, we can compute the probability that $y=0$ as well.  
+
 $$\large P(y=0|x;\theta) = 1- P(y=1|x;\theta)$$
 
 In order to get our discrete 0 or 1 classification, we can translate the output of the hypothesis function as follows:
 $$
 \large h_\theta(x) \geq 0.5 \rightarrow y=1
 $$
+
+
 $$
 \large h_\theta(x) \lt 0.5 \rightarrow y=0
 $$
