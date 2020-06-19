@@ -138,7 +138,7 @@ h_\theta(x_m)
 \sigma(z_3) \\
 \vdots \\
 \sigma(z_m)
-\end{bmatrix}_{ m \times 1}
+\end{bmatrix}_{ m \times 1} \tag{1.4}
 \end{equation}
 $$
 
@@ -159,7 +159,7 @@ h_\theta(x_2) \geq 0.5 ? 1: 0 \\
 h_\theta(x_3) \geq 0.5 ? 1: 0 \\
 \vdots \\
 h_\theta(x_m) \geq 0.5 ? 1: 0 
-\end{bmatrix}_{ m \times 1}
+\end{bmatrix}_{ m \times 1} \tag{1.5}
 \end{equation}
 $$
 
