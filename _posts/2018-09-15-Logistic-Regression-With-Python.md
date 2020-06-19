@@ -264,8 +264,9 @@ $$\large J(\mathbf{\theta}) = \frac{1}{m} \displaystyle\sum_{i=1}^{m} -y_i \cdot
 
 This cross-entropy cost function guarantees a convex graph and a global minimum.
 
+
+<img src="../images/Logistic-4.png" width= 400 height= 700 align=center />
 <figure >
-<img src="http://dasaditi.github.io/images/Logistic-4.png" width= 400 height= 700 align=center alt="https://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html"/>
 <figcaption>FIG 3 : photo curtesy <a href='https://www.coursera.org/learn/machine-learning/supplement/bgEt4/cost-function'>coursera</a></figcaption>
 </figure>
 
