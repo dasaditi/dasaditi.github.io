@@ -252,7 +252,7 @@ W
 Just like any other regression solution using gradient descent, we estimate weights by minimizing the cost function. Linear regression uses mean squared error (MSE) as loss function that gives a convex graph, so it is guaranteed to find a global minimum. However, it’s not an option for logistic regression anymore. Since the hypothesis has changed, mean squared error will result in a non-convex graph with no easy to find minimum global point, as seen in the picture below.
 
 <figure>
-    <img src="../images/Logistic-1.png"  width="400" height="700"></img>
+    <img src="../images/Logistic-1.png" />
     <figcaption >FIG 2 : Non Convex graph when MSE cost fn. is applied to Logistic Regression</figcaption>
 </figure>
 
@@ -265,7 +265,7 @@ $$\large J(\mathbf{\theta}) = \frac{1}{m} \displaystyle\sum_{i=1}^{m} -y_i \cdot
 This cross-entropy cost function guarantees a convex graph and a global minimum.
 
 <figure >
-<img src="../images/Logistic-4.png" align="center" />
+<img src="../images/Logistic-4.png" />
 <figcaption>FIG 3 : photo curtesy <a href='https://www.coursera.org/learn/machine-learning/supplement/bgEt4/cost-function'>coursera</a></figcaption>
 </figure>
 
