@@ -152,7 +152,7 @@ $$
 \widehat{y_3} \\
 \vdots \\
 \widehat{y_m}
-\end{bmatrix}_{ m \times 1}=
+\end{bmatrix}_{ m \times 1}=    
 \begin{bmatrix}
 h_\theta(x_1) \geq 0.5 ? 1: 0 \\
 h_\theta(x_2) \geq 0.5 ? 1: 0 \\
@@ -259,12 +259,13 @@ Just like any other regression solution using gradient descent, we estimate weig
 This strange outcome is due to the fact that in logistic regression we have the sigmoid function. With the $J(\theta)$ depicted in fig 2, the gradient descent algorithm might get stuck at a local minimum point. That's why we still need a neat convex function as we did for linear regression, hence we use the log loss or cross entropy loss as the cost function for logistic regression.
 
 For logistic regression, the cost function is defined as:
+
 $$\large J(\mathbf{\theta}) = \frac{1}{m} \displaystyle\sum_{i=1}^{m} -y_i \cdot \log(h_\theta(x_i)) - (1-y_i) \cdot log(1-h_\theta(x_i))$$  
 
 This cross-entropy cost function guarantees a convex graph and a global minimum.
 
 <figure >
-<img src="images/../Logistic-4.png" width= 400 height= 700 align=center alt="https://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html"/>
+<img src="../images/Logistic-4.png" width= 400 height= 700 align=center alt="https://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html"/>
 <figcaption>FIG 3 : photo curtesy <a href='https://www.coursera.org/learn/machine-learning/supplement/bgEt4/cost-function'>coursera</a></figcaption>
 </figure>
 
