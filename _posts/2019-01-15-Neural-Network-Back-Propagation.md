@@ -667,8 +667,11 @@ $$
 In the final step, we use the gradients to update the parameters. There is still another parameter to consider: the learning rate, denoted by the Greek letter eta (that looks like the letter n), which is the multiplicative factor that we need to apply to the gradient for the parameter update. The learning rate is a tuning parameter in an optimization algorithm that determines the step size at each iteration while moving toward a minimum of a loss function.
 
 $$  W^{[2]} :=  W^{[2]} - \eta \frac{\partial loss}{\partial W^{[2]}} $$
+
 $$  b^{[2]} :=  b^{[2]} - \eta \frac{\partial loss}{\partial b^{[2]}} $$
+
 $$  W^{[1]} :=  W^{[1]} - \eta \frac{\partial loss}{\partial W^{[1]}} $$
+
 $$  b^{[1]} :=  b^{[1]} - \eta \frac{\partial loss}{\partial b^{[1]}} $$
 
 
