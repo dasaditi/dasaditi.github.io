@@ -3,7 +3,7 @@ layout: post
 title: Neural Network BackPropagation Explained
 excerpt: "The idea of this post is to understand the math behind backpropagation of a fully connected neural network."
 img: nn.jpg
-imgsrc: "Photo by Joshua Sortino on Unsplash"
+imgsrc: "Photo by Divyadarshi Acharya on Unsplash"
 tags: [neural network]
 published: true
 ---     
