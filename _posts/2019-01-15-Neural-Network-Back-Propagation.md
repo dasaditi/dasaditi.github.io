@@ -18,7 +18,7 @@ This post assumes that you have a basic understanding of the intuition behind th
 
 Neural Network, like any machine learning algorithm, is a supervised learning algorithm. That means we have historic data and the corresponding label that the data maps to. The job of the neural network, like most machine learning algorithms is to find the parameters which when applied on the model will optimally fit the data. Let's take an example of a two-layer neural network with a hidden layer of three nodes. For simplicity let's consider the input layer with two features and a binary output. The term hidden layer refers to the fact that in the training set, the true values for these nodes in the middle are not observed. We don't consider the input layer in the layer count. Every node on the neural network behaves like a logistic regression unit with an affine layer followed by a non-linear transformation. Essentially what each layer of the neural network does is a non-linear transformation of the input from one vector space to another. We will define items of layer-1 with superscript 1 (for eg. affine layer will be termed $Z^{[1]}$ and the activation layer as $A^{[1]}$) and layer-2 as superscript 2 ($Z^{[2]},A^{[2]}$) and so on.
 
-<img src="images/NN -1.png" alt="A feed forward two layer neural network" height="60%" width="60%" />
+<img src="../images/NN -1.png" alt="A feed forward two layer neural network" height="60%" width="60%" />
 
 
 > **Why Neural Network?**
@@ -26,7 +26,7 @@ Neural Network, like any machine learning algorithm, is a supervised learning al
 
 Let's take a closer look at what is happening in one node, then we will generalize if for the rest of the nodes. We will look at the first node of the hidden layer.
 
-<img src="images/NN -2.png" alt="A feed forward two layer neural network" height="60%" width="60%" />
+<img src="../images/NN -2.png" alt="A feed forward two layer neural network" height="60%" width="60%" />
 
 
 Similar to logistic regression, this node represents two steps of computation. In the first step, we will compute $z_{1}^{[1]}$ which the weighted sum of input data and parameters of the node. The second step is the activation function which is the non-linear representation. There are various activation functions one can choose from and so $g(z)$ is just a way to represent any activation function.
@@ -165,7 +165,7 @@ $$
 
 Basically what we did here is to stack all the weight vectors of each node as column vectors in a matrix and compute the dot product.
 
-<img src="images/NN -3.png"  height="70%" width="70%" />
+<img src="../images/NN -3.png"  height="70%" width="70%" />
 
 
 The output of layer-1 will be activation function applied to $Z$:
@@ -184,7 +184,7 @@ $$
 
 Now that we have successfully calculated the output of layer 1, let's take a closer look at layer-2, which also happens to be the output layer in our case.
 
-<img src="images/NN -4.png"  height="60%" width="60%" />
+<img src="../images/NN -4.png"  height="60%" width="60%" />
 
 
 The input to the layer-2 will be the activation output of layer-1 and since it is the output layer with binary classification, we will use sigmoid as the activation function.
@@ -223,7 +223,7 @@ $$
 
 >If you look closely at the weight matrix, you will notice the size of the weight matrix for layer $l$ is the number of nodes of the layer **$(l-1)$** by the number of nodes of layer $l$. For the input layer, consider the number of features as the number of nodes.
 
-<img src="images/NN -5.png"  height="60%" width="60%" />
+<img src="../images/NN -5.png"  height="60%" width="60%" />
 
 
 ## Vectorized Representation of Neural Network
@@ -440,7 +440,7 @@ $$
 
 Our main objective is to differentiate the loss function with respect to the parameters ($W^{[1]},b^{[1]},W^{[2]},b^{[2]}$) so that we can update the parameters with the gradients. We will see how to update the parameters in the next section, but for now, we are interested in calculating $\large \frac{\partial loss}{\partial W^{[2]}},\frac{\partial loss}{\partial b^{[2]}},\frac{\partial loss}{\partial W^{[1]}},\frac{\partial loss}{\partial b^{[1]}}.$
 
-<img src="images/NN -6.png"  />
+<img src="../images/NN -6.png"  />
 
 
 However, there is no easy way to calculate gradients. We have to fall back on the chain rule to derive the gradients. The **red** arrows in the above figure (Figure 5) depict the path the loss has to propagate to calculate the gradients of layer-1. Similarly, the **blue** arrows depict the path the loss has to propagate to calculate the gradients of layer-2. Since we are working on a 2-layer network, the output of the second layer is the predicted output which is $a^{[2]}$ in our case. We calculate the loss on the predicted output $a^{[2]}$. In the backward propagation, we always start from the loss and move to the left. That means we will calculate the gradients of layer-2 first and then move to layer-1. 
@@ -456,7 +456,7 @@ $$
 
 It might look daunting at first, but don't worry- we will attack each of them separately. Let's start of finding the gradient of the loss w.r.t $a^{[2]}$.
 
-<img src="images/NN -7.png"   height="40%" width="40%"/>
+<img src="../images/NN -7.png"   height="40%" width="40%"/>
 
 Starting with the loss function, let's calculate the gradient w.r.t $a^{[2]}$
 
@@ -471,7 +471,7 @@ $$\frac{\partial loss}{\partial a^{[2]}}= \frac{-y}{a^{[2]}} + \frac{1-y}{1-a^{[
 
 
 
-Now, let's attack the next derivative term. <img src="images/NN -8.png"   height="40%" width="40%"/>
+Now, let's attack the next derivative term. <img src="../images/NN -8.png"   height="40%" width="40%"/>
 
 This the activation layer of the **Layer-2**, which has a sigmoid activation function.
 The derivative of a sigmoid has the form:
@@ -488,16 +488,16 @@ $$\frac{\partial a^{[2]}}{\partial z^{[2]}} = a^{[2]} (1 - a^{[2]}) $$
 
 
 
-Now, if we combine the two gradients, the equation gets much more simplified.<img src="images/NN -9.png"   height="40%" width="40%"/>
+Now, if we combine the two gradients, the equation gets much more simplified.<img src="../images/NN -9.png"   height="40%" width="40%"/>
 
-<img src="images/NN -10.png"   height="40%" width="40%"/>
+<img src="../images/NN -10.png"   height="40%" width="40%"/>
 
 $$ 
 \large \frac{\partial loss}{\partial z^{[2]}} = {(a^{[2]} - y)}
 $$
 
 So far so good, now let's look at the last part of the gradients.
-<img src="images/NN -11.png"   height="40%" width="40%"/>
+<img src="../images/NN -11.png"   height="40%" width="40%"/>
 
 $$ 
 \frac{\partial z^{[2]}}{\partial W^{[2]}} = a^{[1]}
@@ -548,7 +548,7 @@ $$
 
 >Always remember the dimensions of the gradients should always match the original dimensions.
 
-<img src="images/NN -12.png"   height="40%" width="40%"/>
+<img src="../images/NN -12.png"   height="40%" width="40%"/>
 
 We did the above calculation on only one training example. If we have a dataset of m records then the cost function will look like this:
 $$ J(W,b) = \frac{1}{m} \displaystyle\sum_{i=1}^{m} -y_i \cdot \log(\widehat{y}) - (1-y_i) \cdot log(1-\widehat{y})$$ 
@@ -565,7 +565,7 @@ $$
 
 We are done with Layer-2, now let's move on to Layer-1. We will follow the red line to calculate the gradients of layer-1.
 
-<img src="images/NN -13.png"/>
+<img src="../images/NN -13.png"/>
 
 $$ \large \frac{\partial loss}{\partial W^{[1]}}= \frac{\partial loss}{\partial a^{[2]}} \times \frac{\partial a^{[2]}}{\partial z^{[2]}} \times \frac{\partial z^{[2]}}{\partial a^{[1]}}\times \frac{\partial a^{[1]}}{\partial z^{[1]}}\times \frac{\partial z^{[1]}}{\partial W^{[1]}}
 $$
@@ -575,9 +575,9 @@ $$
 
 Parts of the gradients that are coming from Layer-2 has already been calculated. So, We only need to calculate the ones specific to Layer-1.
 
-<img src="images/NN -14.png" height="40%" width="40%"/>
+<img src="../images/NN -14.png" height="40%" width="40%"/>
 
-<img src="images/NN -15.png" height="40%" width="40%"/>
+<img src="../images/NN -15.png" height="40%" width="40%"/>
 
 $$ 
 \frac{\partial z^{[2]}}{\partial a^{[1]}} = W^{[2]}
@@ -585,7 +585,7 @@ $$
 
 
 Now, if we combine the three gradients, we will get the derivative of loss w.r.t $a^{[1]}$.
-<img src="images/NN -16.png" height="40%" width="40%"/>
+<img src="../images/NN -16.png" height="40%" width="40%"/>
 
 As I mentioned before, one way to find out if the calculations are correct to make sure the shape of the parameter and it's gradients are the same. And sometimes, you have to transpose a vector or matrix to make it happen. Before we go further let's see if $\frac{\partial loss}{\partial a^{[1]}}$ match with the size of $a^{[1]}$.
 
@@ -614,7 +614,7 @@ $$
 
 Let's move to the next item where we will calculate the gradient of $a^{[1]}$ w.r.t $z^{[1]}$. This is the activation layer of Layer-1. Since we can use any activation(tanh, relu, sigmoid etc.) in the hidden layers, we will keep this generic. Whatever activation function we have chosen in the hidden layer, we just have to find the gradient of that activation function. 
 
-<img src="images/NN -17.png" height="40%" width="40%"/>
+<img src="../images/NN -17.png" height="40%" width="40%"/>
 
 $$ 
 \frac{\partial a^{[1]}}{\partial z^{[1]}} = {g^{[1]}}^{\prime}(z^{[1]})
@@ -632,7 +632,7 @@ $$
 
 We are very close, let's find the derivative of the last chain.
 
-<img src="images/NN -18.png" height="40%" width="40%"/>
+<img src="../images/NN -18.png" height="40%" width="40%"/>
 
 $$  
 \frac{\partial z^{[1]}}{\partial W^{[1]}}= x
