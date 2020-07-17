@@ -18,7 +18,7 @@ This post assumes that you have a basic understanding of the intuition behind th
 
 Neural Network, like any machine learning algorithm, is a supervised learning algorithm. That means we have historic data and the corresponding label that the data maps to. The job of the neural network, like most machine learning algorithms is to find the parameters which when applied on the model will optimally fit the data. Let's take an example of a two-layer neural network with a hidden layer of three nodes. For simplicity let's consider the input layer with two features and a binary output. The term hidden layer refers to the fact that in the training set, the true values for these nodes in the middle are not observed. We don't consider the input layer in the layer count. Every node on the neural network behaves like a logistic regression unit with an affine layer followed by a non-linear transformation. Essentially what each layer of the neural network does is a non-linear transformation of the input from one vector space to another. We will define items of layer-1 with superscript 1 (for eg. affine layer will be termed $Z^{[1]}$ and the activation layer as $A^{[1]}$) and layer-2 as superscript 2 ($Z^{[2]},A^{[2]}$) and so on.
 
-<img src="../images/NN -1.png" alt="A feed forward two layer neural network" height="60%" width="60%" />
+<img src="../images/NN -1.png" alt="A feed forward two layer neural network" height="60%" width="60%" align="center"/>
 
 
 > **Why Neural Network?**
@@ -26,7 +26,7 @@ Neural Network, like any machine learning algorithm, is a supervised learning al
 
 Let's take a closer look at what is happening in one node, then we will generalize if for the rest of the nodes. We will look at the first node of the hidden layer.
 
-<img src="../images/NN -2.png" alt="A feed forward two layer neural network" height="60%" width="60%" />
+<img src="../images/NN -2.png" alt="A feed forward two layer neural network" height="60%" width="60%" align="center"/>
 
 
 Similar to logistic regression, this node represents two steps of computation. In the first step, we will compute $z_{1}^{[1]}$ which the weighted sum of input data and parameters of the node. The second step is the activation function which is the non-linear representation. There are various activation functions one can choose from and so $g(z)$ is just a way to represent any activation function.
