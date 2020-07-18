@@ -625,9 +625,14 @@ $$
 During forward propagation, you might have noticed that applying activation doesn't change the dimension of the matrix. Activation is applied to each element of the matrix. The same holds true for it's derivative too. This is just a multiplication step and not a dot product.
 
 $$  
+\begin{equation} 
 \frac{\partial loss}{\partial z^{[1]}}=
 \frac{\partial loss}{\partial a^{[1]}} \times \frac{\partial a^{[1]}}{\partial z^{[1]}} = 
-(a^{[2]} - y)\cdot {W^{[2]}}^T * {g^{[1]}}^{\prime}(z^{[1]})
+(a^{[2]} - y)\cdot {W^{[2]}}^T * {g^{[1]}}^{\prime}(z^{[1]}) = 
+\begin{bmatrix}
+    (a^{[2]}-y){w_{1}}^{[2]}* {g^{[1]}}^{\prime}(z^{[1]}) & (a^{[2])}-y){w_{2}}^{[2]}* {g^{[1]}}^{\prime}(z^{[1]}) & (a^{[2])}-y){w_{3}}^{[2]}* {g^{[1]}}^{\prime}(z^{[1]})
+  \end{bmatrix}_{1 \times 3} 
+\end{equation} 
  $$
 
 We are very close, let's find the derivative of the last chain.
@@ -651,6 +656,33 @@ $$
 $$  
 \frac{\partial loss}{\partial b^{[1]}}=\frac{\partial loss}{\partial z^{[1]}} \times \frac{\partial z^{[1]}}{\partial b^{[1]}}= (a^{[2]} - y)\cdot {W^{[2]}}^T * {g^{[1]}}^{\prime}(z^{[1]})
 $$
+
+
+Like we did for Layer-2, we will check if the dimensions of the $W^{[1]}$ and $b^{[1]}$ are same as their gradients.
+
+$$  
+\frac{\partial loss}{\partial W^{[1]}}= x^{T} \cdot \frac{\partial loss}{\partial z^{[1]}}
+$$
+
+$$
+\begin{equation}
+ \begin{bmatrix}  
+ x_1 \\
+ x_2
+ \end{bmatrix}_{2 \times 1} \cdot
+ %
+\begin{bmatrix}
+    (a^{[2]}-y){w_{1}}^{[2]}* {g^{[1]}}^{\prime}(z^{[1]}) & (a^{[2])}-y){w_{2}}^{[2]}* {g^{[1]}}^{\prime}(z^{[1]}) & (a^{[2])}-y){w_{3}}^{[2]}* {g^{[1]}}^{\prime}(z^{[1]})
+  \end{bmatrix}_{1 \times 3}  =
+%
+\begin{bmatrix}
+    x_1 * (a^{[2]}-y){w_{1}}^{[2]}* {g^{[1]}}^{\prime}(z^{[1]}) & x_1 * (a^{[2])}-y){w_{2}}^{[2]}* {g^{[1]}}^{\prime}(z^{[1]}) & x_1 * (a^{[2])}-y){w_{3}}^{[2]}* {g^{[1]}}^{\prime}(z^{[1]}) \\
+x_2 * (a^{[2]}-y){w_{1}}^{[2]}* {g^{[1]}}^{\prime}(z^{[1]}) & x_2 * (a^{[2])}-y){w_{2}}^{[2]}* {g^{[1]}}^{\prime}(z^{[1]}) & x_2 * (a^{[2])}-y){w_{3}}^{[2]}* {g^{[1]}}^{\prime}(z^{[1]})
+  \end{bmatrix}_{2 \times 3} 
+\end{equation}  
+$$
+
+It is a very complication equation and I know it's very difficult to follow along but I just want to prove that the dimension of the gradient is 2 $\times$ 3 and is same as the original weight dimension.
 
 Oh, one last thing, as mentioned earlier while calculating gradient for a dataset of m records we have to have a summation and a division by m (carry forward from the loss function).
 
