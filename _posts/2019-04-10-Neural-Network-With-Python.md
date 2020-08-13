@@ -10,7 +10,7 @@ published: true
 
 # Introduction
 
-In the previous [article](https://dasaditi.github.io/Neural-Network-Back-Propagation/) I went over the math behind Neural Network. We have seen how to do forward propagation, then computed the loss function and went through the math behind the backward propagation in details. In this article we will implement a neural network from scratch in python.
+In the previous [article](https://dasaditi.github.io/Neural-Network-Back-Propagation/), I went over the math behind Neural Network. We have seen how to do forward propagation, then computed the loss function and went through the math behind the backward propagation in details. In this article we will implement a neural network from scratch in python.
 
 We will be training 3-layer neural network with two hidden layer and one output layer (remember, we don't consider input in the layer count). The hidden layers will have RELU activation function whereas the output layer will have sigmoid activation function.
 The code for this article is available [here](https://github.com/dasaditi/neuralNetwork/tree/master/ANN) as a Jupyter notebook, feel free to download and try it out yourself.
@@ -344,7 +344,7 @@ plt.show()
 
 
 # Final Thoughts
-In this article we reviewd the logic of implementing a feed forward neural network and implemented on in python. I hope you have found this post useful. Happy learning :)
+In this article we reviewd the logic of implementing a feed forward neural network and implemented one in python. I hope you have found this post useful. Happy learning :)
 
 # The complete Neural Network
 
