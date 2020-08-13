@@ -55,11 +55,7 @@ import numpy as np # linear algebra
 import matplotlib.pyplot as plt
 import sklearn
 import sklearn.datasets
-import tensorflow as tf
-from tensorflow.keras.models import Sequential 
-from tensorflow.keras.layers import Dense, Activation, Dropout, Flatten
-from tensorflow.keras import optimizers
-import tensorflow.keras.utils as utils
+
 ```
 
 # Load Dataset
